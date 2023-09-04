@@ -74,8 +74,7 @@ public class ClientTests {
         clients = new ArrayList<>();
         clients.add(client);
         when(clientInfoService.allClients()).thenReturn(clients);
-        ResultActions response = mockMvc.perform(get("/"+urlClientController+"/"+urlClientById)
-                .contentType(MediaType.APPLICATION_JSON_VALUE)
+        ResultActions response = mockMvc.perform(get("/"+urlClientController+"/"+urlClientAll)
         );
         response.andDo(print()).
                 andExpect(status().isOk());
