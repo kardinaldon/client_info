@@ -26,9 +26,7 @@ spring:
         default_schema: public
     generate-ddl: false
     hibernate:
-      ddl-auto: create-drop
-      #ddl-auto: update
-      #ddl-auto: none
+      ddl-auto: none
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 values:
